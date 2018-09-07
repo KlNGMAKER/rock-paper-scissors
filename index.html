@@ -17,13 +17,13 @@
 
             function playerPlay() {
                 let valid = false;
-                let playerInput = validateOption(window.prompt("What do you choose?: Rock, Paper, or Scissors?"));
+                let playerInput = validateInput(window.prompt("What do you choose?: Rock, Paper, or Scissors?"));
                 while (!valid) {
-                    let playerInput = validateOption(window.prompt("Not a valid option. Must pick Rock, Paper, or Scissors"));
+                    let playerInput = validateInput(window.prompt("Not a valid option. Must pick Rock, Paper, or Scissors"));
                 }
                 return playerInput;
 
-                function validateOption(input) {
+                function validateInput(input) {
                     i = input.toLowerCase();
                     if (i == "rock" || i == "paper" || i == "scissors") { valid = true; }
                     else { valid = false; }
