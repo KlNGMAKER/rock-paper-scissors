@@ -5,63 +5,19 @@
         <title>Rock, paper, scissors!</title>
     </head>
     <body>
-        <script>
-            function computerPlay() {
-                let pick = Math.floor(Math.random() * 3)
-                switch(pick) {
-                    case 0: return "rock";
-                    case 1: return "paper";
-                    case 2: return "scissors";
-                }
-            }
-
-            function playerPlay() {
-                let valid = false;
-                let playerInput = validateInput(window.prompt("What do you choose?: Rock, Paper, or Scissors?"));
-                while (!valid) {
-                    let playerInput = validateInput(window.prompt("Not a valid option. Must pick Rock, Paper, or Scissors"));
-                }
-                return playerInput;
-
-                function validateInput(input) {
-                    i = input.toLowerCase();
-                    if (i == "rock" || i == "paper" || i == "scissors") { valid = true; }
-                    else { valid = false; }
-                    return i;
-                }
-            }
-
-            function playRound(playerSelection, computerSelection) {
-                let p = playerSelection;
-                let c = computerSelection;
-                if ((p == "rock" && c == "paper") ||
-                    (p == "paper" && c == "scissors") ||
-                    (p == "scissors" && c == "rock")) {
-                    return "computer wins";
-                } else if (p == c) { return "tie"; }
-                else { return "player wins"; }
-            }
-
-            function game(maxRounds = 5) {
-                let playerScore = 0;
-                let computerScore = 0;
-                let tieRounds = 0;
-                for (let r = 1; r <= maxRounds; r++) {
-                    let computerSelection = computerPlay();
-                    let playerSelection = playerPlay(); 
-                    let result = playRound(playerSelection, computerSelection);
-                    if (result == "player wins") { playerScore++; }
-                    else if (result == "computer wins") { computerScore++; }
-                    else { tieRounds++; }
-                }
-                if (playerScore > computerScore) {
-                    console.log(`Player: ${playerScore} vs. Computer: ${computerScore} \(and ${tieRounds} ties\). You win!`);
-                } else if (computerScore > playerScore) {
-                    console.log(`Computer: ${computerScore} vs. Player: ${playerScore} \(and ${tieRounds} ties\). You lose!`);
-                } else {
-                    console.log(`Player: ${playerScore} vs. Computer: ${computerScore} \(and ${tieRounds} ties\). Tie game!`);
-                }
-            }
-        </script>
+        <div id="gameOptions">
+            <button id="startBtn">Start Game</button>
+        </div>
+        <div id="scoreboard">
+            <div id="playerScore" value="0">0</div>
+            <div id="computerScore" value="0">0</div>
+            <div id="tieScore" value="0">0</div>
+        </div>
+        <div id="playerChoices">
+            <button value="rock">Rock</button>
+            <button value="paper">Paper</button>
+            <button value="scissors">Scissors</button>
+        </div>
+        <script src="javascript.js"></script>
     </body>
 </html>
