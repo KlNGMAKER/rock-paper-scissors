@@ -1,0 +1,9 @@
+body {
+}
+
+#gameOptions {
+    display: flex;
+    justify-content: center;
+}
+
+

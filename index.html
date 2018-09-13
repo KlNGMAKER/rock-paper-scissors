@@ -3,16 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>Rock, paper, scissors!</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div id="gameOptions">
             <button id="startBtn">Start Game</button>
+            <label>Max rounds:</label>
+            <input id="maxRounds" type="number"/>
         </div>
         <div id="scoreboard">
-            <div id="playerScore" value="0">0</div>
-            <div id="computerScore" value="0">0</div>
-            <div id="tieScore" value="0">0</div>
+            <div>
+                <p>Player score</p>
+                <div id="playerScore" value="0">0</div>
+            </div>
+            <div>
+                <p>Computer score</p>
+                <div id="computerScore" value="0">0</div>
+            </div>
+            <div>
+                <p>Ties</p>
+                <div id="tieScore" value="0">0</div>
+            </div>
         </div>
+        <div id="announcer"></div>
         <div id="playerChoices">
             <button value="rock">Rock</button>
             <button value="paper">Paper</button>
