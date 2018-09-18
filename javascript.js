@@ -24,12 +24,16 @@ buttons.forEach((button) => {
 });
 
 function startGame() {
-    if ((gameStarted == false) && (maxRoundsInput.validity.badInput == false)) {
+    if ((gameStarted == false) && (maxRoundsInput.validity.badInput == false) &&
+        (!isNaN(maxRoundsInput.valueAsNumber)) && (maxRoundsInput.valueAsNumber != 0)) {
         gameStarted = true;
         startBtn.disabled = true;
-        startBtn.textContent = "Good luck!";
+        startBtn.textContent = "Game in progress";
+        announcer.textContent = "Good luck!";
         maxRoundsInput.disabled = true;
         maxRounds = maxRoundsInput.valueAsNumber;
+    } else { 
+        announcer.textContent = "Enter the number of rounds before starting!";
     }
 }
 

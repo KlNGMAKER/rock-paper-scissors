@@ -3,7 +3,45 @@ body {
 
 #gameOptions {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.6em;
+}
+#gameOptions div {
+    display: inline-block;
+    margin: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#announcer {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    min-height: 2.5em;
+}
+#playerChoices {
+    text-align: center;
+}
+
+#playerChoices button {
+    margin: 0.3em;
+}
+
+#scoreboard {
+    display: flex;
     justify-content: center;
 }
 
+#scoreboard div {
+    margin: 0.6em;
+}
 
+#scoreboard div div {
+    display: inline;
+}
+
+#scoreboard div p {
+    display: inline;
+}

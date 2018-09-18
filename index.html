@@ -7,25 +7,29 @@
     </head>
     <body>
         <div id="gameOptions">
-            <button id="startBtn">Start Game</button>
-            <label>Max rounds:</label>
-            <input id="maxRounds" type="number"/>
-        </div>
-        <div id="scoreboard">
             <div>
-                <p>Player score</p>
-                <div id="playerScore" value="0">0</div>
+                <label>Max rounds:</label>
+                <input id="maxRounds" type="number"/>
             </div>
             <div>
-                <p>Computer score</p>
-                <div id="computerScore" value="0">0</div>
-            </div>
-            <div>
-                <p>Ties</p>
-                <div id="tieScore" value="0">0</div>
+                <button id="startBtn">Start Game</button>
             </div>
         </div>
         <div id="announcer"></div>
+        <div id="scoreboard">
+            <div>
+                <p>Player score:</p>
+                <div id="playerScore" value="0">0</div>
+            </div>
+            <div>
+                <p>Computer score:</p>
+                <div id="computerScore" value="0">0</div>
+            </div>
+            <div>
+                <p>Ties:</p>
+                <div id="tieScore" value="0">0</div>
+            </div>
+        </div>
         <div id="playerChoices">
             <button value="rock">Rock</button>
             <button value="paper">Paper</button>
